@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 2nd Anniversary ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:'Baloo 2','Poppins',sans-serif;
+}
+
+body{
+	background:linear-gradient(135deg,#ffd1e8,#ffe7f3);
+	overflow-x:hidden;
+	color:#6b2340;
+	font-size:13px;
+}
+
+.container{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:25px;
+}
+
+.card{
+	background:rgba(255,255,255,.22);
+	backdrop-filter:blur(14px);
+	padding:22px;
+	border-radius:30px;
+	text-align:center;
+	max-width:420px;
+	box-shadow:0 12px 30px rgba(107,35,64,0.12);
+	animation:fadeIn 1.2s;
+}
+
+.photo{
+	width:140px;
+	height:140px;
+	border-radius:50%;
+	object-fit:cover;
+	border:4px solid rgba(255,255,255,0.9);
+	margin-bottom:18px;
+	box-shadow:0 8px 18px rgba(107,35,64,0.12);
+}
+
+h1{
+	font-size:22px;
+	margin-bottom:12px;
+	letter-spacing:0.4px;
+	text-shadow:0 2px 6px rgba(255,255,255,0.25);
+}
+
+.message{
+	font-size:13px;
+	line-height:1.7;
+	margin-bottom:20px;
+}
+
+.btn{
+	background:#fff7fb;
+	color:#c8235a;
+	border:none;
+	padding:10px 22px;
+	border-radius:40px;
+	font-size:14px;
+	font-weight:600;
+	cursor:pointer;
+	transition:.25s;
+	box-shadow:0 6px 14px rgba(200,35,90,0.08);
+}
+
+.btn:hover{
+	transform:scale(1.05) translateY(-2px);
+}
+
+.hidden{
+	display:none;
+	margin-top:18px;
+	animation:fadeIn 1s;
+}
+
+.heart{
+	position:fixed;
+	color:#ff6b9a;
+	font-size:20px;
+	animation:float 7s linear infinite;
+	opacity:.9;
+	pointer-events:none;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh) rotate(0deg);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+footer{
+	margin-top:20px;
+	font-size:12px;
+	opacity:.85;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<img src="your-photo.jpg" class="photo">
+
+<h1>Happy 2nd Anniversary ❤️</h1>
+
+<p class="message">
+Two years may sound like just a number, but for me, they hold countless beautiful memories that I will treasure forever.
+
+Thank you for staying by my side through every smile, every challenge, every laugh, and every dream we've shared together.
+
+You are my safe place, my happiness, and my greatest blessing. Every day with you reminds me how lucky I am to have someone as loving, caring, and amazing as you.
+
+No matter what life brings us, I promise to continue loving you with all my heart, supporting you, respecting you, and choosing you every single day.
+
+Here's to all the memories we've made and to the many more anniversaries we'll celebrate together.
+
+I love you more than words can ever express.
+
+Happy 2nd Anniversary, my love. ❤️
+</p>
+
+<button class="btn" onclick="showLove()">
+Open My Heart ❤️
+</button>
+
+<div id="love" class="hidden">
+
+<h2>💖 Forever & Always 💖</h2>
+
+<p style="margin-top:15px;line-height:1.8;">
+No matter where life takes us,
+I will always choose you.
+
+Thank you for making my world brighter,
+my heart happier,
+and my life more meaningful.
+
+I can't wait to create more memories,
+laugh together,
+travel together,
+grow together,
+and spend forever with you.
+
+I love you endlessly. ❤️
+</p>
+
+</div>
+
+<footer>
+Made with ❤️ just for you
+</footer>
+
+</div>
+
+</div>
+
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function showLove(){
+document.getElementById("love").classList.remove("hidden");
+}
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*25)+"px";
+
+heart.style.animationDuration=(5+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},9000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
